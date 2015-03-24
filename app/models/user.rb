@@ -1,13 +1,13 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  has_many :posts
 
   validates :username, presence: true
   validates :username, uniqueness: true
   validates :email, presence: true
   validates :email, uniqueness: true
   # validates :username, format: { with: /\A[a-z0-9_-]{3,20}\z/}
-  validates :name, presence: true
 
   include BCrypt
   

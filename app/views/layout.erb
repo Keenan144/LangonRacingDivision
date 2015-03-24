@@ -18,13 +18,21 @@
 
 <div class="topnavbar">
   <div id="lrd_logo"> <a href="/"><em>Langon Racing Division</em></a> </div>
-  <a href="/login" id="login_button" class="navbutton"> Login/ Sign-up </a>
+  <% if session_current_user == nil %>
+    <a href="/login" id="login_button" class="navbutton"> Login/ Sign-up </a>
+  <% else %>
+    <a href="/logout" id="logout_button" class="navbutton"> Logout </a>
+  <% end %>
   <a href="" id="contact_button" class="navbutton">Contact</a>
   <a href="" id="garage" class="navbutton">Garage</a>
   <a href="" id="meettheteam" class="navbutton">Meet Team LRD</a>
   <a href="" id="media" class="navbutton">Media</a>
   <a href="" id="news" class="navbutton">LRD News</a>
   <a href="" id="schedule" class="navbutton">Season Schedule</a>
+
+  <% if session_current_user %>
+   <p> <%= session_current_user.username %> </p>
+  <% end %>
 </div>
 
   <%= yield %>
