@@ -2,6 +2,8 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   has_many :posts
+  has_many :events
+  has_many :cars
 
   validates :username, presence: true
   validates :username, uniqueness: true
