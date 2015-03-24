@@ -1,0 +1,34 @@
+/*=====layout======*/
+.topnavbar{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(231,231,222);
+  background-color: rgba(231,231,222,0.6);
+}
+#lrd_logo{
+  color: maroon;
+  font-size: 22px;
+}
+.navbutton{
+  position: relative;
+  float: right;
+  margin-right: 12px;
+  margin-top: -1.2%;
+  line-height: 20px;
+}
+.container{
+  width: 75%;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 6%;
+}
+/*=====login======*/
+.item{
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+

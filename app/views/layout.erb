@@ -7,9 +7,6 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -18,6 +15,18 @@
   <title></title>
 </head>
 <body>
+
+<div class="topnavbar">
+  <div id="lrd_logo"> <a href="/"><em>Langon Racing Division</em></a> </div>
+  <a href="/login" id="login_button" class="navbutton"> Login/ Sign-up </a>
+  <a href="" id="contact_button" class="navbutton">Contact</a>
+  <a href="" id="garage" class="navbutton">Garage</a>
+  <a href="" id="meettheteam" class="navbutton">Meet Team LRD</a>
+  <a href="" id="media" class="navbutton">Media</a>
+  <a href="" id="news" class="navbutton">LRD News</a>
+  <a href="" id="schedule" class="navbutton">Season Schedule</a>
+</div>
+
   <%= yield %>
 </body>
 </html>
