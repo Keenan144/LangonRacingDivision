@@ -37,6 +37,15 @@ body{
   background-color: rgba(1111,1111,1111,0.4);
   border-radius: 10px;
 }
+#container{
+  width: 75%;
+  overflow: scroll;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 6%;
+  font-size: 22px;
+  font-weight: bold;
+}
 .logincontainer{
   width: 75%;
   height: 200px;
