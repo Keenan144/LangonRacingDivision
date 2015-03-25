@@ -11,6 +11,8 @@ require 'rubygems'
 require 'uri'
 require 'pathname'
 require 'thin'
+require 'haml'
+
 
 require 'pg'
 require 'active_record'

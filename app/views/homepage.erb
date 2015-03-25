@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="currentposts">
+    <% Post.all.each do |post| %>
+     <h2> <%= post.title %> </h2>
+     <p> <%= post.content %> </p>
+    <% end %>
+  </div>
+
+
+  <div id="container"> 
+    Auto racing is a passion I have had for many years. The thrill of speed, grip, anger, and peace coming together at once to push a 3000 lb hunk of metal around a twisty road hoping to make it out in one peace faster than everyone else cannot be beat. Auto racing is the story of how humans can tame technology.
+
+    <br>
+    --Keenan S.
+  </div>
+
+  <% if session_current_user %>
+  <div class="postcontent">
+      <form action="/user/<%= session_current_user.id %>/post" method="post">
+      Title
+      <br>
+      <input type="text" name="title" placeholder="Enter a Title Here">
+      <br>
+      <br>
+      Content
+      <br>
+      <input type="text" name="content" placeholder="...">
+      <br>
+      <br>
+      <input type="submit" value="submit">
+    </form>
+
+    <a href="upload"> Upload Image </a>
+  </div>
+  <% end %>
+
+
+</div>
