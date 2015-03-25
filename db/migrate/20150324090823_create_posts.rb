@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text    :content
       t.string  :title
       t.string  :pagetype
+      t.string :photo
       t.integer :user_id
 
       t.timestamps

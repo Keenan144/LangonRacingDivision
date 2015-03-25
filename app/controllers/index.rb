@@ -67,8 +67,50 @@ post '/user/:user_id/post' do
   redirect '/'
 end
 
+ 
+get "/upload" do
+  haml(:upload)
+end
+ 
+post '/upload' do
+  unless params[:file] &&
+         (tmpfile = params[:file][:tempfile]) &&
+         (name = params[:file][:filename])
+    @error = "No file selected"
+    return haml(:upload)
+  end
+    directory = "public/files"
+    path = File.join(directory, name)
+    File.open(path, "wb") { |f| f.write(tmpfile.read) }
+  redirect "/"
 
+end
 
+# ================== navbar routes ================== #
+
+get '/contact' do
+  erb :contact
+end
+
+get '/garage' do 
+  erb :garage
+end
+
+get '/media' do
+  erb :media
+end
+
+get '/news' do 
+  erb :news
+end
+
+get '/schedule' do 
+  erb :schedule
+end
+
+get '/teamLRD' do 
+  erb :teamLRD
+end
 
 
 
