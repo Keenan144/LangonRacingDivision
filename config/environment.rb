@@ -12,6 +12,7 @@ require 'uri'
 require 'pathname'
 require 'thin'
 require 'haml'
+require 'pg'
 
 
 require 'pg'
