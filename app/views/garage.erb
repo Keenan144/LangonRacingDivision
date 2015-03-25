@@ -1,1 +1,42 @@
-garage.erb
+
+<div class="container">
+  <% Car.all.each do |car| %>
+  <br><br>
+  <div class="car">
+   <%= car.info %> <%= car.make %> <%= car.model %>
+   <%= car.engine %> <%= car.drive %> with <%= car.horsepower %> horsepower pushing the car from 0-60 mph in <%= car.noto_sixty %> seconds with a top speed of <%= car.top_speed %> Mph!
+   <br><br>
+   Number <%= car.number %>, <%= car.color %> 
+   <hr>
+  </div>
+  <% end %>
+
+
+  <% if session_current_user %>
+    <br><br>
+    <form id="newcar_form" action='/newcar' method="post" align="center">
+      year: <input type="text" name="info" placeholder="2009">
+      <br><br>
+      make: <input type="text" name="make" placeholder="Saleen">
+      <br><br>
+      model: <input type="text" name="model" placeholder="Racecraft 420s">
+      <br><br>
+      engine: <input type="text" name="engine" placeholder="4.6L Supercharged">
+      <br><br>
+      drivetype: <input type="text" name="drive" placeholder="rwd">
+      <br><br>
+      color: <input type="text" name="color" placeholder="black">
+      <br><br>
+      horsepower: <input type="integer" name="horsepower" placeholder="530">
+      <br><br>
+      topspeed: <input type="integer" name="top_speed" placeholder="186">
+      <br><br>
+      noto_sixty: <input type="integer" name="noto_sixty" placeholder="4.1">
+      <br><br>
+      number: <input type="integer" name="number" placeholder="144">
+      
+      <br><br>
+      <input type="submit" value="newcar!">
+    </form>
+  <%end%>
+</div>

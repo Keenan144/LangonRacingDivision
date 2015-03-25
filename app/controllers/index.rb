@@ -112,8 +112,24 @@ get '/teamLRD' do
   erb :teamLRD
 end
 
+# =================== New Car ====================#
 
 
+post '/newcar' do
+  @new_car = Car.create(
+    info: params[:info],
+    make: params[:make],
+    model: params[:model],
+    engine: params[:engine],
+    drive: params[:drive],
+    color: params[:color], 
+    horsepower: params[:horsepower],
+    top_speed: params[:top_speed],
+    noto_sixty: params[:noto_sixty],
+    number: params[:number]
+    )
+  redirect '/garage'
+end
 
 
 

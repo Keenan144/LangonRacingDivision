@@ -29,6 +29,7 @@ body{
 .container{
   width: 75%;
   height: 600px;
+  overflow: scroll;
   margin-right: auto;
   margin-left: auto;
   margin-top: 6%;
@@ -45,6 +46,13 @@ body{
   background-color: rgb(111,111,11);
   background-color: rgba(1111,1111,1111,0.4);
   border-radius: 10px;
+}
+.car{
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 22px;
+  font-variant: bold;
 }
 /*=====login======*/
 .item{
