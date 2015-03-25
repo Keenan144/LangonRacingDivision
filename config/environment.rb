@@ -10,6 +10,7 @@ require 'rubygems'
 
 require 'uri'
 require 'pathname'
+require 'thin'
 
 require 'pg'
 require 'active_record'
